@@ -6,6 +6,7 @@ use App\Models\Home;
 use App\Http\Requests\StoreHomeRequest;
 use App\Http\Requests\UpdateHomeRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
@@ -61,7 +62,8 @@ class HomeController extends Controller
     public function edit(Home $home)
     {
         return view('dashboard.home.edit', [
-            'homes'=> $home
+            'homes'=> Home::all(),
+            'home' => $home
         ]);
     }
 

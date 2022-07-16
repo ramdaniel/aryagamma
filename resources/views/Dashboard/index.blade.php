@@ -1,111 +1,67 @@
 @extends('layouts.dashboard')
 @section('container')
- <!-- Content Wrapper. Contains page content -->
- <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard Admin </h1>
+<div class="main-panel">
+  <div class="content">
+    <div class="container-fluid">
+ 
+      <h4 class="page-title">Dashboard</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card card-stats card-warning">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <i class="fas fa-image"></i>
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">Gallery</p>
+                    <h4 class="card-title">10</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
-            </ol>
-          </div>
-          <!-- /.col -->
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <!-- Info boxes -->
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"
-                ><i class="fas fa-image"></i
-              ></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Galeri</span>
-                <span class="info-box-number">
-                  10
-            
-                </span>
+        <div class="col-md-3">
+          <div class="card card-stats card-success">
+            <div class="card-body ">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <i class="fas fa-thumbs-up"></i>
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">Testimoni</p>
+                    <h4 class="card-title">3</h4>
+                  </div>
+                </div>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
           </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"
-                ><i class="fas fa-thumbs-up"></i
-              ></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Testimoni</span>
-                <span class="info-box-number">41,410</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-
-          <!-- fix for small devices only -->
-          <div class="clearfix hidden-md-up"></div>
-
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"
-                ><i class="fas fa-user"></i
-              ></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Pendaftar</span>
-                <span class="info-box-number">760</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"
-                ><i class="fas fa-users"></i
-              ></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Jumlah Siswa</span>
-                <span class="info-box-number">2,000</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
         </div>
-        <!-- /.row -->
+        <div class="col-md-3">
+          <div class="card card-stats card-danger">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-5">
+                  <div class="icon-big text-center">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                  <div class="numbers">
+                    <p class="card-category">Pendaftar</p>
+                    <h4 class="card-title">1303</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Main row -->
-
-        <!-- /.row -->
-      </div>
-      <!--/. container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
 @endsection

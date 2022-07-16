@@ -1,27 +1,12 @@
-      <!-- Navbar -->
-      <nav class="main-header navbar navbar-expand navbar-dark">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
-              ><i class="fas fa-bars"></i
-            ></a>
-          </li>
-        </ul>
-
-        <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto">
-          <!-- Navbar Search -->
-
-          <li class="nav-item">
-            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-              <i class="fas fa-expand-arrows-alt"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Logout</a>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.navbar -->
+<div class="wrapper">
+  <div class="main-header">
+    <div class="logo-header">
+      <a href="/" class="logo">
+        Arya Gamma Academy
+      </a>
+      <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="topbar-toggler more"><i class="la la-ellipsis-v"></i></button>
+    </div>
+    </div>

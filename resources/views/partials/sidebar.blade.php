@@ -1,107 +1,69 @@
-     <!-- Main Sidebar Container -->
-     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
-          <img
-            src="{{ asset('../dist/img/arya_gamma.jpg') }}"
-            alt="Admin AGA"
-            class="brand-image img-circle elevation-3"
-            style="opacity: 0.8"
-          />
-          <span class="brand-text font-weight-light">Arya Gamma</span>
+<div class="sidebar">
+  <div class="scrollbar-inner sidebar-wrapper">
+
+    <ul class="nav">
+      <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
+        <a href="index.html">
+          <i class="fa fa-home"></i>
+          <p>Dashboard</p>
         </a>
-
-        <!-- Sidebar -->
-        <div class="sidebar">
-          <!-- Sidebar user panel (optional) -->
-          <!-- SidebarSearch Form -->
-          <!-- Sidebar Menu -->
-          <nav class="mt-2">
-            <ul
-              class="nav nav-pills nav-sidebar flex-column"
-              data-widget="treeview"
-              role="menu"
-              data-accordion="false"
-            >
-              <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-
-              <li class="nav-item">
-                <a href="pages/widgets.html" class="nav-link">
-                  <i class="nav-icon fas fa-home"></i>
-                  <p>
-                    Home
-                    <span class="right badge badge-danger">New</span>
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-pen"></i>
-                  <p>
-                    Input Data
-                    <i class="fas fa-angle-left right"></i>
-                    <span class="badge badge-info right">7</span>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
-                      <i class="fas fa-house-user nav-icon"></i>
-                      <p>Home</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      href="pages/layout/top-nav-sidebar.html"
-                      class="nav-link"
-                    >
-                      <i class="far fa-id-badge nav-icon"></i>
-                      <p>Profil</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
-                      <i class="fas fa-book nav-icon"></i>
-                      <p>Program Pembelajaran</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                      <i class="far fa-image nav-icon"></i>
-                      <p>Galeri</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                      <i class="far fa-edit nav-icon"></i>
-                      <p>Pendaftar</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                      <i class="fas fa-thumbs-up nav-icon"></i>
-                      <p>Testimoni</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                      <i class="fas fa-newspaper nav-icon"></i>
-                      <p>Artikel</p>
-                    </a>
-                  </li>
-                  
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="/" class="nav-link">
-                  <i class="fas fa-eye nav-icon"></i>
-                  <p>Lihat Website</p>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <!-- /.sidebar-menu -->
-        </div>
-        <!-- /.sidebar -->
-      </aside>
+      </li>
+      <li class="nav-item {{ Request::is('dashboard/home*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="
+          fas fa-home-user"></i>
+          <p>Edit Home</p>
+        </a>
+      </li>
+      <li class="nav-item {{ Request::is('dashboard/galeri*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="
+          fas fa-image"></i>
+          <p>Gallery</p>
+        </a>
+      </li>
+      <li class="nav-item {{ Request::is('dashboard/profil*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="fa-solid fa-clipboard-user"></i>
+          <p>Profil</p>
+        </a>
+      </li>
+      <li class="nav-item {{ Request::is('dashboard/program*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="fa-solid fa-book"></i>
+          <p>Program Pembelajaran</p>
+        </a>
+      </li>
+      <li class="nav-item{{ Request::is('dashboard/pendaftar*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <p>Pendaftar</p>
+        </a>
+      </li>
+      <li class="nav-item{{ Request::is('dashboard/testimoni*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <p>Testimoni</p>
+        </a>
+      </li>
+      <li class="nav-item{{ Request::is('dashboard/artikel*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="fa-solid fa-newspaper"></i>
+          <p>Artikel</p>
+        </a>
+      </li>
+      <li class="nav-item{{ Request::is('dashboard/lihat*') ? 'active' : '' }}">
+        <a href="components.html">
+          <i class="fa-solid fa-eye"></i>
+          <p>Lihat Website</p>
+        </a>
+      </li>
+    </ul>
+    <li class="nav-item update-pro">
+      <button  data-toggle="modal" data-target="#modalUpdate">
+        <i class="fas fa-arrow-right-from-bracket"></i>
+        <p>Logout</p>
+      </button>
+    </li>
+  </div>
+</div>
