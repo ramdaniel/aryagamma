@@ -3,29 +3,29 @@
 
     <ul class="nav">
       <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
-        <a href="index.html">
+        <a href="/dashboard">
           <i class="fa fa-home"></i>
           <p>Dashboard</p>
         </a>
       </li>
       <li class="nav-item {{ Request::is('dashboard/home*') ? 'active' : '' }}">
-        <a href="components.html">
+        <a href="/dashboard/home/1/edit">
           <i class="
           fas fa-home-user"></i>
           <p>Edit Home</p>
         </a>
       </li>
       <li class="nav-item {{ Request::is('dashboard/galeri*') ? 'active' : '' }}">
-        <a href="components.html">
+        <a href="/dashboard/galeri">
           <i class="
           fas fa-image"></i>
           <p>Gallery</p>
         </a>
       </li>
-      <li class="nav-item {{ Request::is('dashboard/profil*') ? 'active' : '' }}">
-        <a href="components.html">
+      <li class="nav-item {{ Request::is('dashboard/about*') ? 'active' : '' }}">
+        <a href="/dashboard/about/1/edit">
           <i class="fa-solid fa-clipboard-user"></i>
-          <p>Profil</p>
+          <p>About</p>
         </a>
       </li>
       <li class="nav-item {{ Request::is('dashboard/program*') ? 'active' : '' }}">
@@ -40,30 +40,30 @@
           <p>Pendaftar</p>
         </a>
       </li>
-      <li class="nav-item{{ Request::is('dashboard/testimoni*') ? 'active' : '' }}">
-        <a href="components.html">
+      <li class="nav-item {{ Request::is('dashboard/testimoni*') ? 'active' : '' }}">
+        <a href="/dashboard/testimoni">
           <i class="fa-solid fa-thumbs-up"></i>
           <p>Testimoni</p>
         </a>
       </li>
-      <li class="nav-item{{ Request::is('dashboard/artikel*') ? 'active' : '' }}">
-        <a href="components.html">
+      <li class="nav-item {{ Request::is('dashboard/artikel*') ? 'active' : '' }}">
+        <a href="/dashboard/artikel">
           <i class="fa-solid fa-newspaper"></i>
           <p>Artikel</p>
         </a>
       </li>
       <li class="nav-item{{ Request::is('dashboard/lihat*') ? 'active' : '' }}">
-        <a href="components.html">
+        <a href="/">
           <i class="fa-solid fa-eye"></i>
           <p>Lihat Website</p>
         </a>
       </li>
     </ul>
     <li class="nav-item update-pro">
-      <button  data-toggle="modal" data-target="#modalUpdate">
-        <i class="fas fa-arrow-right-from-bracket"></i>
-        <p>Logout</p>
-      </button>
+      <form action="/logout" method="post">
+        @csrf
+        <button type="submit" class="nav-link px-3 bg-dark border-0"><span data-feather="log-out"></span> Logout</button>
+      </form>
     </li>
   </div>
 </div>

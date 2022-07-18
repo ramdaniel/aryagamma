@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="row" style="margin-top: 100px">
-        <div class="col text-center">
+        <div class="col text-center/">
           <img src="assets/img/reguler.jpg" class="rounded-5" width="350" alt="" />
         </div>
         <div class="col my-auto">

@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Home;
-use App\Http\Requests\StoreHomeRequest;
-use App\Http\Requests\UpdateHomeRequest;
+use App\Models\About;
+use App\Http\Requests\StoreAboutRequest;
+use App\Http\Requests\UpdateAboutRequest;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\Request;
-class HomeController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home', [
-            'homes'=> Home::all()
+        return view('pages.about', [
+            'abouts'=> About::all()
            ]);
     }
 
@@ -34,10 +33,10 @@ class HomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHomeRequest  $request
+     * @param  \App\Http\Requests\StoreAboutRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreHomeRequest $request)
+    public function store(StoreAboutRequest $request)
     {
         //
     }
@@ -45,10 +44,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function show(Home $home)
+    public function show(About $about)
     {
         //
     }
@@ -56,31 +55,32 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function edit(Home $home)
+    public function edit(About $about)
     {
-        return view('dashboard.home.edit', [
-            'homes'=> Home::all(),
-            'home' => $home
+        return view('dashboard.about.edit', [
+            'abouts'=> About::all(),
+            'about' => $about
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateHomeRequest  $request
-     * @param  \App\Models\Home  $home
+     * @param  \App\Http\Requests\UpdateAboutRequest  $request
+     * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateHomeRequest $request, Home $home)
+    public function update(UpdateAboutRequest $request, About $about)
     {
         $rules =[
-            'judul' => 'required',
             'deskripsi' => 'required',
-            'tombol' => 'required',
-            'link' => 'required',
+            'no_wa' => 'required',
+            'instagram' => 'required',
+            'email' => 'required',
+            'alamat' => 'required',
             'foto' => 'image'
         ];
         $validatedData = $request->validate($rules);
@@ -88,22 +88,22 @@ class HomeController extends Controller
         if($request->oldImage){
             Storage::delete($request->oldImage);
             }
-            $validatedData['foto']=$request->file('foto')->store('foto-home');
+            $validatedData['foto']=$request->file('foto')->store('foto-about');
         }
             
         
         
-            Home::where('id', $home->id)->update($validatedData);
-        return redirect('/dashboard/home/1/edit')->with('succes', 'Data Home Berhasil Di Update');
+            About::where('id', $about->id)->update($validatedData);
+        return redirect('/dashboard/about/1/edit')->with('succes', 'Data Home Berhasil Di Update');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Home $home)
+    public function destroy(About $about)
     {
         //
     }

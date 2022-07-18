@@ -18,7 +18,7 @@
                 <div class="col-7 d-flex align-items-center">
                   <div class="numbers">
                     <p class="card-category">Gallery</p>
-                    <h4 class="card-title">10</h4>
+                     <span class="count">{{ $galeri }}</span>
                   </div>
                 </div>
               </div>
