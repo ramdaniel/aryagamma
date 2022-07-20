@@ -74,7 +74,7 @@
         <div class="carousel_slide grid grid-cols-2 gap-5">
       @foreach ($galeris as $galeri)
           <a href="{{ asset('storage/' . $galeri->foto) }}" class="my-5" data-fancybox="gallery">
-            <img src="{{ asset('storage/' . $galeri->foto) }}" style="max-width: 250px" />
+            <img src="{{ asset('storage/' . $galeri->foto) }}" style="max-width: 350px; height: 250px;" />
           </a>
           @endforeach
         </div>

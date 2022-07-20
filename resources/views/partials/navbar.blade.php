@@ -9,13 +9,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto gap-3">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-          <a class="nav-link" href="/profil">Profil</a>
-          <a class="nav-link" href="/program-pembelajaran">Program Pembelajaran</a>
-          <a class="nav-link" href="/galeri">Galeri</a>
-          <a class="nav-link" href="/testimoni">Testimoni</a>
-          <a class="nav-link" href="#">Artikel</a>
-          <a class="nav-link" href="#">Kontak</a>
+          <a class="nav-link {{ request ()->segment(1) == '' ? 'active' : '' }}"  href="/">Home</a>
+          <a class="nav-link {{ request ()->segment(1) == 'about' ? 'active' : '' }}"  href="/about">About</a>
+          <a class="nav-link {{ request ()->segment(1) == 'program-pembelajaran' ? 'active' : '' }}" href="/program-pembelajaran">Program Pembelajaran</a>
+          <a class="nav-link " href="/#galeri">Galeri</a>
+          <a class="nav-link " href="/#testimoni">Testimoni</a>
+          <a class="nav-link {{ request ()->segment(1) == 'artikel' ? 'active' : '' }}" href="/artikel">Artikel</a>
+          <a class="btn btn-warning rounded-3 px-4" href="/pendaftaran" target="_blank" >Daftar</a>
         </div>
       </div>
     </div>

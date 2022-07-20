@@ -99,7 +99,7 @@ class TestimoniController extends Controller
             
         
         
-            testimoni::where('id', $testimoni->id)->update($validatedData);
+            Testimoni::where('id', $testimoni->id)->update($validatedData);
         return redirect('/dashboard/testimoni/1/edit')->with('succes', 'Data Home Berhasil Di Update');
     }
 

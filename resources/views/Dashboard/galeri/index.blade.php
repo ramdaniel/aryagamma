@@ -25,7 +25,7 @@
                         <td><form action="/dashboard/galeri/{{ $galeri->id }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
-                                <button class="badge bg-danger border-0" onclick="return confirm('Apakah Kamu Yakin Menghapus Foto Ini?')"><i class="fa-solid fa-trash" style="font-size: 30px"></i></button>
+                                <button class="badge bg-danger border-0" onclick="return confirm('Apakah Kamu Yakin Menghapus Foto Ini?')"><i class="fa-solid fa-trash" style="font-size: 15px"></i></button>
                               </form></td>
                         
                     </tr>

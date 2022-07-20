@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
                 'foto' => 'storage/foto-about/F5Q2G7lBBdDwqvojkdktEJbmKZEzA15eEkPgzAfP.png',
                 'deskripsi' => 'Bimbel  bhakti goblog dengan metode pembelajaran terbaik serta mentor terlatih dan professional.',
                 'instagram' => '@aryagammaacademy',
-                'no_wa' => '085155436197',
+                'no_wa' => '85155436197',
                 'email' => 'aryagamma@gmail.com',
                 'alamat' => 'Jalan kemuning regency',
                 ]);

@@ -29,15 +29,15 @@
         </a>
       </li>
       <li class="nav-item {{ Request::is('dashboard/program*') ? 'active' : '' }}">
-        <a href="components.html">
+        <a href="/dashboard/program">
           <i class="fa-solid fa-book"></i>
           <p>Program Pembelajaran</p>
         </a>
       </li>
-      <li class="nav-item{{ Request::is('dashboard/pendaftar*') ? 'active' : '' }}">
-        <a href="components.html">
+      <li class="nav-item {{ Request::is('dashboard/pendaftaran*') ? 'active' : '' }}">
+        <a href="/dashboard/pendaftaran">
           <i class="fa-solid fa-pen-to-square"></i>
-          <p>Pendaftar</p>
+          <p>Pendaftaran</p>
         </a>
       </li>
       <li class="nav-item {{ Request::is('dashboard/testimoni*') ? 'active' : '' }}">

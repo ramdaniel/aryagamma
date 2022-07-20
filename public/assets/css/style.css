@@ -38,6 +38,9 @@ body {
     color: #000000;
     margin-top: 120px;
 }
+.nav-link.active {
+    font-weight: 700;
+}
 
 .infonum .num,
 .infonum .label {
